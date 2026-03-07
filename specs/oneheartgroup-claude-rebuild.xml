@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <meta>
+    <name>OneHeart Group Next.js Rebuild</name>
+    <goal>Rebuild the live OneHeart Group homepage from the Webflow export as a clean Next.js site for Vercel, preserving the hero video, logo carousel, branding, imagery, and general page structure.</goal>
+    <primaryRoute>/</primaryRoute>
+    <framework>Next.js 15 App Router</framework>
+    <language>TypeScript</language>
+    <styling>Tailwind CSS</styling>
+    <deployment>Vercel</deployment>
+    <scope>Rebuild only the live homepage and its supporting nav/footer/contact section. Ignore unused template pages from the Webflow export unless explicitly requested later.</scope>
+  </meta>
+
+  <instructions>
+    <instruction>Use the exported asset files directly from the Webflow ZIP wherever possible.</instruction>
+    <instruction>Do not recreate the site by pasting raw Webflow HTML. Build clean reusable React components.</instruction>
+    <instruction>Preserve the current hero video feel, dark premium wholesale/distribution aesthetic, and the logo carousel near the top of the homepage.</instruction>
+    <instruction>Prefer local assets in /public over hotlinking external URLs.</instruction>
+    <instruction>Keep the build simple and production-ready. No CMS is needed for the first pass.</instruction>
+    <instruction>Keep the site responsive and visually polished on mobile, tablet, and desktop.</instruction>
+  </instructions>
+
+  <assets>
+    <logos>
+      <file source="images/Website_Logo-removebg-preview.png" target="public/images/Website_Logo-removebg-preview.png" usage="main brand logo" />
+      <file source="images/DellLogo-removebg-preview.png" target="public/images/DellLogo-removebg-preview.png" usage="logo carousel" />
+      <file source="images/HP-removebg-preview.png" target="public/images/HP-removebg-preview.png" usage="logo carousel" />
+      <file source="images/Lenovo-removebg-preview.png" target="public/images/Lenovo-removebg-preview.png" usage="logo carousel" />
+      <file source="images/SengledLogo-removebg-preview.png" target="public/images/SengledLogo-removebg-preview.png" usage="logo carousel" />
+      <file source="images/panasonic-black-logo-hd-png-701751694713035mjqpqhovuz-removebg-preview---Edited.png" target="public/images/panasonic-logo.png" usage="logo carousel" />
+      <file source="images/Sigalux_NonT_-removebg-preview.png" target="public/images/Sigalux_NonT_-removebg-preview.png" usage="logo carousel" />
+      <file source="images/Linksys-removebg-preview.png" target="public/images/Linksys-removebg-preview.png" usage="logo carousel" />
+      <file source="images/imgbin_8542d828a7d27a79fc7933b6244dc886.png" target="public/images/extra-brand-logo.png" usage="logo carousel" />
+    </logos>
+    <video>
+      <file source="videos/852388-hd_1920_1080_24fps-1-transcode.mp4" target="public/videos/hero.mp4" usage="hero background video" />
+      <file source="videos/852388-hd_1920_1080_24fps-1-transcode.webm" target="public/videos/hero.webm" usage="hero background video fallback" />
+    </video>
+    <images>
+      <file source="images/Distribution-Wholesale-image-1.webp" target="public/images/operations/distribution-wholesale-1.webp" usage="homepage image" />
+      <file source="images/63fced5f0b584bcedc82dbce_wholesale.webp" target="public/images/operations/wholesale.webp" usage="homepage image" />
+      <file source="images/AI-Circular-Manufacturing-image.webp" target="public/images/technology/ai-circular-manufacturing.webp" usage="homepage image" />
+      <file source="images/1759472303481.webp" target="public/images/operations/1759472303481.webp" usage="homepage image" />
+      <file source="images/1-1.webp" target="public/images/operations/1-1.webp" usage="homepage image" />
+      <file source="images/1-3.webp" target="public/images/operations/1-3.webp" usage="homepage image" />
+      <file source="images/686db8d14659af06b63a3eea-1752041804038.webp" target="public/images/operations/686db8d14659af06b63a3eea-1752041804038.webp" usage="homepage image" />
+      <file source="https://ripple-brand-growth-63801-64338.lovable.app/assets/warehouse-pallets-BI377fYI.webp" target="public/images/operations/warehouse-pallets.webp" usage="currently external image; download locally if possible" />
+    </images>
+  </assets>
+
+  <siteStructure>
+    <route path="/" file="app/page.tsx">
+      <section id="header" component="SiteHeader" />
+      <section id="hero" component="HeroVideo" />
+      <section id="logo-carousel" component="LogoCarousel" />
+      <section id="solutions" component="SolutionsGrid" />
+      <section id="about" component="AboutSection" />
+      <section id="why-choose-us" component="WhyChooseUs" />
+      <section id="technology" component="TechnologySection" />
+      <section id="operations" component="OperationsSection" />
+      <section id="commitment" component="CommitmentSection" />
+      <section id="contact" component="ContactSection" />
+      <section id="footer" component="SiteFooter" />
+    </route>
+  </siteStructure>
+
+  <copy>
+    <headline>Wholesale Distribution Built for Scale</headline>
+    <subsections>
+      <item>Complete Distribution Solutions</item>
+      <item>About OneHeart Group</item>
+      <item>Why Choose OneHeart Group?</item>
+      <item>Powered by Technology</item>
+      <item>Our Operations</item>
+      <item>Our Commitment</item>
+      <item>Let&apos;s Start the Conversation</item>
+    </subsections>
+    <serviceCards>
+      <card>Wholesale Distribution</card>
+      <card>Supply Chain Management</card>
+      <card>E-Commerce Integration</card>
+      <card>Logistics Solutions</card>
+    </serviceCards>
+    <aboutHighlights>
+      <item>Your Trusted Distribution Partner</item>
+      <item>Built for Performance</item>
+      <item>Our Core Values</item>
+      <item>Customer-Centric</item>
+      <item>Reliability</item>
+      <item>Innovation</item>
+      <item>Scale</item>
+    </aboutHighlights>
+    <whyChooseUs>
+      <item>Partnership Approach</item>
+      <item>Industry Expertise</item>
+      <item>Technology-Driven</item>
+      <item>Scalable Solutions</item>
+    </whyChooseUs>
+    <technologyHighlights>
+      <item>Modern Infrastructure, Maximum Efficiency</item>
+      <item>Warehouse Management</item>
+      <item>Cloud Integration</item>
+      <item>Secure Operations</item>
+      <item>Automated Processing</item>
+    </technologyHighlights>
+    <commitmentHighlights>
+      <item>Proven Excellence</item>
+      <item>Nationwide Reach</item>
+      <item>Growth Partnership</item>
+      <item>Dedicated Support</item>
+    </commitmentHighlights>
+    <contactContent>
+      <item>Send us a Message</item>
+      <item>Email Us</item>
+      <item>Call Us</item>
+      <item>Location</item>
+    </contactContent>
+  </copy>
+
+  <components>
+    <component name="SiteHeader" file="components/site-header.tsx">
+      <requirements>
+        <item>Sticky or fixed top navigation with transparent-to-solid transition on scroll.</item>
+        <item>Use the exported main logo image.</item>
+        <item>Include desktop nav and mobile menu.</item>
+        <item>Nav should anchor-scroll to homepage sections.</item>
+      </requirements>
+    </component>
+
+    <component name="HeroVideo" file="components/hero-video.tsx">
+      <requirements>
+        <item>Autoplay, muted, loop, playsInline background video.</item>
+        <item>Use local /videos/hero.webm and /videos/hero.mp4 sources.</item>
+        <item>Add a dark overlay for text readability.</item>
+        <item>Place headline, supporting text, and CTA over the video.</item>
+        <item>Make the section feel premium and cinematic without slowing load excessively.</item>
+        <item>Provide a poster or graceful fallback if video fails.</item>
+      </requirements>
+    </component>
+
+    <component name="LogoCarousel" file="components/logo-carousel.tsx">
+      <requirements>
+        <item>Create an infinite horizontally scrolling marquee style carousel.</item>
+        <item>Use the exported brand logos from /public/images.</item>
+        <item>Duplicate the logo list in the render logic to make the loop seamless.</item>
+        <item>Pause or slow on hover only if it feels smooth.</item>
+        <item>Keep all logos grayscale or neutral if needed, but preserve brand recognizability.</item>
+        <item>Ensure responsive spacing and consistent logo height.</item>
+      </requirements>
+    </component>
+
+    <component name="SolutionsGrid" file="components/solutions-grid.tsx">
+      <requirements>
+        <item>Four service cards matching the live site structure.</item>
+        <item>Cards should feel modern and premium with subtle hover effects.</item>
+      </requirements>
+    </component>
+
+    <component name="AboutSection" file="components/about-section.tsx">
+      <requirements>
+        <item>Include an image plus descriptive text and value blocks.</item>
+        <item>Use exported imagery from the site assets.</item>
+      </requirements>
+    </component>
+
+    <component name="WhyChooseUs" file="components/why-choose-us.tsx">
+      <requirements>
+        <item>Use a grid of benefit cards or icon cards.</item>
+        <item>Keep typography clean and enterprise-grade.</item>
+      </requirements>
+    </component>
+
+    <component name="TechnologySection" file="components/technology-section.tsx">
+      <requirements>
+        <item>Feature imagery and a technology capability list.</item>
+        <item>Use the exported AI/circular manufacturing image.</item>
+      </requirements>
+    </component>
+
+    <component name="OperationsSection" file="components/operations-section.tsx">
+      <requirements>
+        <item>Build a responsive image layout or collage using the exported operations/warehouse images.</item>
+        <item>Do not use external image URLs in final code if local replacements are available.</item>
+      </requirements>
+    </component>
+
+    <component name="CommitmentSection" file="components/commitment-section.tsx">
+      <requirements>
+        <item>Display four commitment/credibility blocks.</item>
+      </requirements>
+    </component>
+
+    <component name="ContactSection" file="components/contact-section.tsx">
+      <requirements>
+        <item>Include a clean contact form with name, email, company, and message fields.</item>
+        <item>Wire form submission to a simple placeholder server action or API route.</item>
+        <item>Do not depend on Webflow forms.</item>
+        <item>Include visible company contact info blocks.</item>
+      </requirements>
+    </component>
+
+    <component name="SiteFooter" file="components/site-footer.tsx">
+      <requirements>
+        <item>Include logo, key nav links, services/company/contact columns, and copyright.</item>
+      </requirements>
+    </component>
+  </components>
+
+  <designSystem>
+    <style>
+      <item>Dark, premium, industrial-tech aesthetic.</item>
+      <item>Large confident typography in hero and section headings.</item>
+      <item>Use generous spacing and smooth section rhythm.</item>
+      <item>Rounded corners, subtle borders, soft shadows, restrained gradients.</item>
+      <item>Preserve a polished enterprise distribution/operations feel rather than startup gimmicks.</item>
+    </style>
+    <implementation>
+      <item>Use Tailwind utility classes directly in components.</item>
+      <item>Store reusable class patterns in small helper constants only when necessary.</item>
+      <item>Use next/image for images and standard video tag for the hero video.</item>
+      <item>Use semantic HTML and accessible button/link labeling.</item>
+    </implementation>
+  </designSystem>
+
+  <filePlan>
+    <file path="app/layout.tsx" purpose="root layout, metadata, fonts, global shell" />
+    <file path="app/page.tsx" purpose="homepage composition" />
+    <file path="app/globals.css" purpose="tailwind layers and any tiny custom animations" />
+    <file path="components/site-header.tsx" purpose="navigation" />
+    <file path="components/hero-video.tsx" purpose="hero section with video background" />
+    <file path="components/logo-carousel.tsx" purpose="infinite logo row" />
+    <file path="components/solutions-grid.tsx" purpose="services section" />
+    <file path="components/about-section.tsx" purpose="about/value section" />
+    <file path="components/why-choose-us.tsx" purpose="why choose us section" />
+    <file path="components/technology-section.tsx" purpose="technology section" />
+    <file path="components/operations-section.tsx" purpose="operations imagery section" />
+    <file path="components/commitment-section.tsx" purpose="commitment section" />
+    <file path="components/contact-section.tsx" purpose="contact form and info" />
+    <file path="components/site-footer.tsx" purpose="footer" />
+    <file path="lib/site-data.ts" purpose="text, nav items, logo list, image references" />
+  </filePlan>
+
+  <acceptanceCriteria>
+    <criterion>The homepage builds and runs locally with npm install and npm run dev.</criterion>
+    <criterion>The hero uses the exported local video files and autoplays muted in modern browsers.</criterion>
+    <criterion>The logo carousel renders all exported brand logos and scrolls seamlessly.</criterion>
+    <criterion>The homepage includes all major live-site sections in the correct order.</criterion>
+    <criterion>The site is fully responsive across mobile, tablet, and desktop breakpoints.</criterion>
+    <criterion>No Webflow runtime dependency is required for the rebuilt homepage.</criterion>
+    <criterion>All primary images and logos are sourced from local project assets in /public, except any asset explicitly marked for manual replacement.</criterion>
+    <criterion>The contact form UI is functional and connected to a placeholder submit handler.</criterion>
+    <criterion>The site is deployable to Vercel without special server configuration.</criterion>
+  </acceptanceCriteria>
+
+  <claudeCodePrompt>
+    <prompt>
+      Build a clean production-ready Next.js 15 + TypeScript + Tailwind homepage for OneHeart Group based on this XML spec. Recreate the live homepage only, not the unused template pages. Use reusable components, local assets from /public, and preserve the hero video and logo carousel as top priorities. Do not paste raw Webflow markup. Implement the file plan, create all listed components, and make the page polished and responsive. Use a premium dark enterprise design. If exact copy is not available in this XML, use the live-site section headings and concise supporting marketing copy that matches the brand. Prefer practical implementation over overengineering.
+    </prompt>
+  </claudeCodePrompt>
+
+  <notes>
+    <note>One image found in the exported homepage references an external URL. Replace it with a local asset if available or download it into /public before final deployment.</note>
+    <note>The Webflow export contains many unused template pages. Ignore them for this rebuild.</note>
+    <note>If the user later wants inner pages, create separate routes after the homepage is approved.</note>
+  </notes>
+</project>
