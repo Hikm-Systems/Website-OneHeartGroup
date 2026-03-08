@@ -2,6 +2,8 @@ import SiteHeader from "@/components/site-header";
 import HeroVideo from "@/components/hero-video";
 import LogoCarousel from "@/components/logo-carousel";
 import SolutionsGrid from "@/components/solutions-grid";
+import ScaleCtaSection from "@/components/scale-cta-section";
+import StatsSection from "@/components/stats-section";
 import AboutSection from "@/components/about-section";
 import WhyChooseUs from "@/components/why-choose-us";
 import TechnologySection from "@/components/technology-section";
@@ -18,6 +20,8 @@ export default function HomePage() {
         <HeroVideo />
         <LogoCarousel />
         <SolutionsGrid />
+        <ScaleCtaSection />
+        <StatsSection />
         <AboutSection />
         <WhyChooseUs />
         <TechnologySection />
