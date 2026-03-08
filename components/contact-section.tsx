@@ -1,6 +1,13 @@
 "use client";
 
-import { siteConfig } from "@/lib/site-data";
+import { siteConfig, contactInfo } from "@/lib/site-data";
+import { getIcon } from "@/components/icons";
+
+const contactValues: Record<string, string> = {
+  email: siteConfig.email,
+  phone: siteConfig.phone,
+  location: siteConfig.location,
+};
 
 export default function ContactSection() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -73,41 +80,16 @@ export default function ContactSection() {
 
           {/* Contact info */}
           <div className="space-y-6 lg:col-span-2">
-            {/* Email */}
-            <div className="rounded-2xl border border-divider bg-bg-secondary p-6">
-              <div className="mb-3 inline-flex rounded-xl bg-brand-primary/15 p-3 text-brand-primary">
-                <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                </svg>
+            {contactInfo.map((info) => (
+              <div key={info.key} className="rounded-2xl border border-divider bg-bg-secondary p-6">
+                <div className="mb-3 inline-flex rounded-xl bg-brand-primary/15 p-3 text-brand-primary">
+                  {getIcon(info.icon, "h-6 w-6")}
+                </div>
+                <h3 className="mb-1 font-semibold text-text-primary">{info.title}</h3>
+                <p className="text-sm text-text-muted mb-2">{info.subtitle}</p>
+                <p className="text-sm text-brand-primary">{contactValues[info.key]}</p>
               </div>
-              <h3 className="mb-1 font-semibold text-text-primary">Email Us</h3>
-              <p className="text-sm text-text-muted mb-2">Send us an email anytime</p>
-              <p className="text-sm text-brand-primary">{siteConfig.email}</p>
-            </div>
-
-            {/* Phone */}
-            <div className="rounded-2xl border border-divider bg-bg-secondary p-6">
-              <div className="mb-3 inline-flex rounded-xl bg-brand-primary/15 p-3 text-brand-primary">
-                <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                </svg>
-              </div>
-              <h3 className="mb-1 font-semibold text-text-primary">Call Us</h3>
-              <p className="text-sm text-text-muted mb-2">Available for inquiries</p>
-              <p className="text-sm text-brand-primary">{siteConfig.phone}</p>
-            </div>
-
-            {/* Location */}
-            <div className="rounded-2xl border border-divider bg-bg-secondary p-6">
-              <div className="mb-3 inline-flex rounded-xl bg-brand-primary/15 p-3 text-brand-primary">
-                <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
-                </svg>
-              </div>
-              <h3 className="mb-1 font-semibold text-text-primary">Location</h3>
-              <p className="text-sm text-text-muted mb-2">Serving businesses nationwide</p>
-              <p className="text-sm text-brand-primary">{siteConfig.location}</p>
-            </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,13 +1,5 @@
 import Image from "next/image";
-
-const operationsImages = [
-  { src: "/images/1-3.webp", alt: "Distribution center" },
-  { src: "/images/Distribution-Wholesale-image-1.webp", alt: "Wholesale distribution" },
-  { src: "/images/63fced5f0b584bcedc82dbce_wholesale.webp", alt: "Wholesale operations" },
-  { src: "/images/1759472303481.webp", alt: "Logistics operations" },
-  { src: "/images/AI-Circular-Manufacturing-image.webp", alt: "Manufacturing" },
-  { src: "/images/1-1.webp", alt: "Warehouse operations" },
-];
+import { operationsImages } from "@/lib/site-data";
 
 export default function OperationsSection() {
   return (
