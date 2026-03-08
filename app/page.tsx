@@ -1,0 +1,31 @@
+import SiteHeader from "@/components/site-header";
+import HeroVideo from "@/components/hero-video";
+import LogoCarousel from "@/components/logo-carousel";
+import SolutionsGrid from "@/components/solutions-grid";
+import AboutSection from "@/components/about-section";
+import WhyChooseUs from "@/components/why-choose-us";
+import TechnologySection from "@/components/technology-section";
+import OperationsSection from "@/components/operations-section";
+import CommitmentSection from "@/components/commitment-section";
+import ContactSection from "@/components/contact-section";
+import SiteFooter from "@/components/site-footer";
+
+export default function HomePage() {
+  return (
+    <>
+      <SiteHeader />
+      <main>
+        <HeroVideo />
+        <LogoCarousel />
+        <SolutionsGrid />
+        <AboutSection />
+        <WhyChooseUs />
+        <TechnologySection />
+        <OperationsSection />
+        <CommitmentSection />
+        <ContactSection />
+      </main>
+      <SiteFooter />
+    </>
+  );
+}
