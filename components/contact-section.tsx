@@ -62,16 +62,16 @@ export default function ContactSection() {
           >
             <div className="grid gap-5 sm:grid-cols-2">
               <input
-                name="name"
+                name="firstName"
                 type="text"
-                placeholder="Your Name"
+                placeholder="First Name"
                 required
                 className="rounded-xl border border-divider bg-bg-default px-5 py-3.5 text-sm text-text-primary placeholder:text-text-tertiary outline-none transition-colors focus:border-brand-primary"
               />
               <input
-                name="email"
-                type="email"
-                placeholder="Email Address"
+                name="lastName"
+                type="text"
+                placeholder="Last Name"
                 required
                 className="rounded-xl border border-divider bg-bg-default px-5 py-3.5 text-sm text-text-primary placeholder:text-text-tertiary outline-none transition-colors focus:border-brand-primary"
               />
@@ -80,6 +80,13 @@ export default function ContactSection() {
               name="company"
               type="text"
               placeholder="Company Name"
+              className="w-full rounded-xl border border-divider bg-bg-default px-5 py-3.5 text-sm text-text-primary placeholder:text-text-tertiary outline-none transition-colors focus:border-brand-primary"
+            />
+            <input
+              name="email"
+              type="email"
+              placeholder="Email"
+              required
               className="w-full rounded-xl border border-divider bg-bg-default px-5 py-3.5 text-sm text-text-primary placeholder:text-text-tertiary outline-none transition-colors focus:border-brand-primary"
             />
             <textarea
