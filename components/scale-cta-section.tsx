@@ -8,8 +8,9 @@ export default function ScaleCtaSection() {
       <div className="absolute inset-0">
         <Image
           src={ctaTop.backgroundImage}
-          alt="Wholesale distribution warehouse"
+          alt="Wholesale distribution warehouse for scalable brand growth"
           fill
+          sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-[#060606]/70" />

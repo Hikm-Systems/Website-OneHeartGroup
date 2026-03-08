@@ -29,6 +29,8 @@ export default function OperationsSection() {
                 src={img.src}
                 alt={img.alt}
                 fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                loading="lazy"
                 className="object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>

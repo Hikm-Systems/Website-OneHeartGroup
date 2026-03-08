@@ -15,14 +15,14 @@ export const navItems = [
 ];
 
 export const brandLogos = [
-  { src: "/images/DellLogo-removebg-preview.png", alt: "Dell" },
-  { src: "/images/HP-removebg-preview.png", alt: "HP" },
-  { src: "/images/Lenovo-removebg-preview.png", alt: "Lenovo" },
-  { src: "/images/SengledLogo-removebg-preview.png", alt: "Sengled" },
-  { src: "/images/panasonic-black-logo-hd-png-701751694713035mjqpqhovuz-removebg-preview---Edited.png", alt: "Panasonic" },
-  { src: "/images/Sigalux_NonT_-removebg-preview.png", alt: "Sigalux" },
-  { src: "/images/Linksys-removebg-preview.png", alt: "Linksys" },
-  { src: "/images/imgbin_8542d828a7d27a79fc7933b6244dc886.png", alt: "Brand Partner" },
+  { src: "/images/DellLogo-removebg-preview.png", alt: "Dell wholesale distribution partner" },
+  { src: "/images/HP-removebg-preview.png", alt: "HP wholesale distribution partner" },
+  { src: "/images/Lenovo-removebg-preview.png", alt: "Lenovo wholesale distribution partner" },
+  { src: "/images/SengledLogo-removebg-preview.png", alt: "Sengled brand growth partner" },
+  { src: "/images/panasonic-black-logo-hd-png-701751694713035mjqpqhovuz-removebg-preview---Edited.png", alt: "Panasonic wholesale distribution partner" },
+  { src: "/images/Sigalux_NonT_-removebg-preview.png", alt: "Sigalux brand growth partner" },
+  { src: "/images/Linksys-removebg-preview.png", alt: "Linksys wholesale distribution partner" },
+  { src: "/images/imgbin_8542d828a7d27a79fc7933b6244dc886.png", alt: "Trusted brand distribution partner" },
 ];
 
 export const heroContent = {
@@ -87,7 +87,7 @@ export const stats = [
 export const aboutContent = {
   heading: "About",
   headingAccent: "OneHeart Group",
-  subtitle: "Powering the future of wholesale distribution with innovation and excellence",
+  subtitle: "Powering brand growth through innovative wholesale distribution and supply chain excellence",
   partnerSection: {
     heading: "Your Trusted",
     headingAccent: "Distribution Partner",
@@ -96,7 +96,7 @@ export const aboutContent = {
       "Our mission is simple: to be the most reliable, efficient, and innovative distribution partner for brands looking to scale. We combine decades of logistics expertise with cutting-edge technology to deliver results that exceed expectations.",
       "From warehousing and fulfillment to supply chain management and e-commerce integration, we handle the complexity so you can focus on what you do best — building your brand.",
     ],
-    image: { src: "/images/AI-Circular-Manufacturing-image.webp", alt: "OneHeart Group distribution operations" },
+    image: { src: "/images/AI-Circular-Manufacturing-image.webp", alt: "OneHeart Group wholesale distribution operations driving brand growth" },
   },
   performanceSection: {
     heading: "Built for",
@@ -105,7 +105,7 @@ export const aboutContent = {
       "Our advanced warehouse management systems, real-time inventory tracking, and automated order processing ensure accuracy and speed at every step. With strategically located facilities and a nationwide logistics network, we deliver on time, every time.",
       "Whether you're a growing brand or an established enterprise, OneHeart Group has the infrastructure, expertise, and commitment to support your success.",
     ],
-    image: { src: "/images/1759472303481.webp", alt: "Logistics operations" },
+    image: { src: "/images/1759472303481.webp", alt: "Supply chain logistics and wholesale distribution operations" },
   },
 };
 
@@ -184,16 +184,16 @@ export const technologyContent = {
   headingAccent: "Technology",
   subtitle: "Cutting-edge systems driving efficiency and accuracy",
   description: "Our operations are built on cutting-edge technology that delivers speed, precision, and transparency at every touchpoint in the supply chain.",
-  image: { src: "/images/686db8d14659af06b63a3eea-1752041804038.webp", alt: "Technology-powered operations" },
+  image: { src: "/images/686db8d14659af06b63a3eea-1752041804038.webp", alt: "Technology-powered wholesale distribution and supply chain management" },
 };
 
 export const operationsImages = [
-  { src: "/images/1-3.webp", alt: "Distribution center" },
-  { src: "/images/Distribution-Wholesale-image-1.webp", alt: "Wholesale distribution" },
-  { src: "/images/63fced5f0b584bcedc82dbce_wholesale.webp", alt: "Wholesale operations" },
-  { src: "/images/1759472303481.webp", alt: "Logistics operations" },
-  { src: "/images/AI-Circular-Manufacturing-image.webp", alt: "Manufacturing" },
-  { src: "/images/1-1.webp", alt: "Warehouse operations" },
+  { src: "/images/1-3.webp", alt: "Wholesale distribution center supporting brand growth" },
+  { src: "/images/Distribution-Wholesale-image-1.webp", alt: "Wholesale distribution warehouse and fulfillment operations" },
+  { src: "/images/63fced5f0b584bcedc82dbce_wholesale.webp", alt: "Wholesale supply chain operations and inventory management" },
+  { src: "/images/1759472303481.webp", alt: "Logistics and distribution operations for brand partners" },
+  { src: "/images/AI-Circular-Manufacturing-image.webp", alt: "Advanced manufacturing and distribution technology" },
+  { src: "/images/1-1.webp", alt: "Warehouse operations powering wholesale distribution at scale" },
 ];
 
 export const commitmentItems = [

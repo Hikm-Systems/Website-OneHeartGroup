@@ -6,7 +6,7 @@ export default function LogoCarousel() {
   const tripled = [...brandLogos, ...brandLogos, ...brandLogos];
 
   return (
-    <section className="bg-bg-default py-8">
+    <section aria-label="Trusted brand partners" className="bg-bg-default py-8">
       <div className="overflow-hidden">
         <div className="animate-marquee flex w-max items-center gap-12">
           {tripled.map((logo, i) => (
@@ -16,6 +16,7 @@ export default function LogoCarousel() {
                 alt={logo.alt}
                 width={200}
                 height={120}
+                loading="lazy"
                 className="h-[120px] w-auto max-w-[200px] object-contain"
               />
             </div>

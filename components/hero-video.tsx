@@ -10,6 +10,7 @@ export default function HeroVideo() {
         loop
         playsInline
         poster={heroContent.video.poster}
+        aria-label="OneHeart Group wholesale distribution operations background video"
         className="absolute inset-0 h-full w-full rounded-[2rem] object-cover"
       >
         {heroContent.video.sources.map((source) => (
