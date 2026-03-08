@@ -36,10 +36,10 @@ export default function HeroVideo() {
   }, []);
 
   return (
-    <section id="home" ref={sectionRef} className="relative min-h-screen overflow-hidden">
+    <section id="home" ref={sectionRef} className="sticky top-0 h-screen overflow-hidden">
       <div
         data-hero-inner=""
-        className="fixed inset-0 h-screen w-full overflow-hidden will-change-transform"
+        className="absolute inset-0 h-full w-full overflow-hidden will-change-transform"
         style={{ transformOrigin: "center center" }}
       >
         {/* Background video */}
