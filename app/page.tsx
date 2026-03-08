@@ -6,6 +6,7 @@ import ScaleCtaSection from "@/components/scale-cta-section";
 import StatsSection from "@/components/stats-section";
 import AboutSection from "@/components/about-section";
 import WhyChooseUs from "@/components/why-choose-us";
+import ScaleCtaBottom from "@/components/scale-cta-bottom";
 import TechnologySection from "@/components/technology-section";
 import OperationsSection from "@/components/operations-section";
 import CommitmentSection from "@/components/commitment-section";
@@ -24,6 +25,7 @@ export default function HomePage() {
         <StatsSection />
         <AboutSection />
         <WhyChooseUs />
+        <ScaleCtaBottom />
         <TechnologySection />
         <OperationsSection />
         <CommitmentSection />

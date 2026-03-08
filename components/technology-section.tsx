@@ -36,8 +36,8 @@ export default function TechnologySection() {
           {/* Image */}
           <div className="relative overflow-hidden rounded-2xl">
             <Image
-              src="/images/AI-Circular-Manufacturing-image.webp"
-              alt="AI-powered technology infrastructure"
+              src="/images/686db8d14659af06b63a3eea-1752041804038.webp"
+              alt="Technology-powered operations"
               width={640}
               height={480}
               className="h-auto w-full object-cover"

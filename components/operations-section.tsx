@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 const operationsImages = [
@@ -13,13 +11,13 @@ const operationsImages = [
 
 export default function OperationsSection() {
   return (
-    <section id="gallery" className="bg-bg-default py-24">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="gallery" className="bg-bg-default px-6 py-24">
+      <div className="mx-auto max-w-7xl">
         <div className="mb-12 text-center">
           <p className="mb-3 text-sm font-semibold tracking-widest text-brand-primary uppercase font-mono">
             Gallery
           </p>
-          <h2 className="text-3xl font-bold sm:text-4xl">
+          <h2 className="text-3xl font-bold sm:text-4xl md:text-[3.125rem] md:leading-[3.5rem] tracking-tight">
             Our <span className="gradient-text">Operations</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-text-muted">
@@ -27,15 +25,13 @@ export default function OperationsSection() {
             efficiency, and innovation.
           </p>
         </div>
-      </div>
 
-      {/* Horizontal scrolling carousel */}
-      <div className="overflow-x-auto pb-4 scrollbar-hide">
-        <div className="flex gap-5 px-6" style={{ width: "max-content" }}>
+        {/* 2 rows x 3 columns grid */}
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {operationsImages.map((img) => (
             <div
               key={img.src}
-              className="relative h-[320px] w-[420px] shrink-0 overflow-hidden rounded-2xl sm:h-[380px] sm:w-[480px]"
+              className="relative aspect-[4/3] overflow-hidden rounded-2xl"
             >
               <Image
                 src={img.src}
