@@ -19,6 +19,7 @@ export default function HomePage() {
       <SiteHeader />
       <main>
         <HeroVideo />
+        <div className="relative z-10 bg-bg-default">
         <LogoCarousel />
         <SolutionsGrid />
         <ScaleCtaSection />
@@ -30,6 +31,7 @@ export default function HomePage() {
         <OperationsSection />
         <CommitmentSection />
         <ContactSection />
+        </div>
       </main>
       <SiteFooter />
     </>
