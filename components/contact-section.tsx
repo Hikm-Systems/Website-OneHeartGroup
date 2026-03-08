@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { siteConfig, contactInfo } from "@/lib/site-data";
 import { getIcon } from "@/components/icons";
 
@@ -10,13 +11,31 @@ const contactValues: Record<string, string> = {
 };
 
 export default function ContactSection() {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    console.log("Form submitted:", Object.fromEntries(data));
-    alert("Thanks for reaching out! We'll be in touch soon.");
-    form.reset();
+
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(Object.fromEntries(data)),
+      });
+
+      if (!res.ok) {
+        setStatus("error");
+        return;
+      }
+
+      setStatus("sent");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -72,10 +91,17 @@ export default function ContactSection() {
             />
             <button
               type="submit"
-              className="w-full rounded-full bg-brand-primary px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#dde2eb] hover:text-[#060606] sm:w-auto"
+              disabled={status === "sending"}
+              className="w-full rounded-full bg-brand-primary px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-[#dde2eb] hover:text-[#060606] disabled:opacity-50 sm:w-auto"
             >
-              Send Message
+              {status === "sending" ? "Sending..." : "Send Message"}
             </button>
+            {status === "sent" && (
+              <p className="text-sm text-green-400">Thanks for reaching out! We&apos;ll be in touch soon.</p>
+            )}
+            {status === "error" && (
+              <p className="text-sm text-red-400">Something went wrong. Please try again.</p>
+            )}
           </form>
 
           {/* Contact info */}
