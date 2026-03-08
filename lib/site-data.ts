@@ -8,11 +8,10 @@ export const siteConfig = {
 };
 
 export const navItems = [
-  { label: "Solutions", href: "#solutions" },
+  { label: "Home", href: "#home" },
+  { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
-  { label: "Technology", href: "#technology" },
-  { label: "Operations", href: "#operations" },
-  { label: "Contact", href: "#contact" },
+  { label: "Gallery", href: "#gallery" },
 ];
 
 export const brandLogos = [
@@ -29,27 +28,27 @@ export const brandLogos = [
 export const serviceCards = [
   {
     title: "Wholesale Distribution",
-    description:
-      "End-to-end wholesale distribution services with nationwide reach, competitive pricing, and reliable fulfillment for retailers of all sizes.",
-    icon: "package",
+    description: "Full-service wholesale distribution with nationwide reach and multi-channel fulfillment capabilities.",
+    icon: "warehouse",
+    features: ["B2B & B2C fulfillment", "Cross-docking services", "Retail distribution", "Drop shipping solutions"],
   },
   {
     title: "Supply Chain Management",
-    description:
-      "Streamlined supply chain solutions that reduce costs, improve visibility, and ensure your products move efficiently from source to shelf.",
-    icon: "link",
+    description: "End-to-end supply chain solutions optimized for efficiency and scalability.",
+    icon: "chart",
+    features: ["Inventory optimization", "Demand forecasting", "Order management", "Real-time tracking"],
   },
   {
     title: "E-Commerce Integration",
-    description:
-      "Seamless integration with major e-commerce platforms, enabling real-time inventory sync, automated order processing, and fast shipping.",
+    description: "Seamless integration with major e-commerce platforms and marketplaces.",
     icon: "globe",
+    features: ["Multi-channel sync", "Automated order routing", "Returns management", "Analytics dashboard"],
   },
   {
     title: "Logistics Solutions",
-    description:
-      "Comprehensive logistics management including warehousing, freight coordination, and last-mile delivery optimization.",
+    description: "Comprehensive logistics and transportation management for reliable delivery.",
     icon: "truck",
+    features: ["Route optimization", "Last-mile delivery", "Freight management", "Real-time visibility"],
   },
 ];
 
@@ -95,15 +94,14 @@ export const commitmentItems = [
 
 export const footerLinks = {
   services: [
-    { label: "Wholesale Distribution", href: "#solutions" },
-    { label: "Supply Chain", href: "#solutions" },
-    { label: "E-Commerce", href: "#solutions" },
-    { label: "Logistics", href: "#solutions" },
+    { label: "Wholesale Distribution", href: "#services" },
+    { label: "Supply Chain", href: "#services" },
+    { label: "E-Commerce", href: "#services" },
+    { label: "Logistics", href: "#services" },
   ],
   company: [
     { label: "About Us", href: "#about" },
-    { label: "Technology", href: "#technology" },
-    { label: "Operations", href: "#operations" },
+    { label: "Gallery", href: "#gallery" },
     { label: "Contact", href: "#contact" },
   ],
 };

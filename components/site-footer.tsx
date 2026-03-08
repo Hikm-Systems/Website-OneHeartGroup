@@ -3,12 +3,12 @@ import { siteConfig, footerLinks } from "@/lib/site-data";
 
 export default function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-brand-light px-6 py-16">
+    <footer className="border-t border-divider bg-bg-secondary px-6 py-16">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="relative mb-4 h-10 w-44">
+            <div className="relative mb-4 h-16 w-48">
               <Image
                 src={siteConfig.logo}
                 alt={siteConfig.name}
@@ -16,7 +16,7 @@ export default function SiteFooter() {
                 className="object-contain object-left"
               />
             </div>
-            <p className="text-sm leading-relaxed text-gray-400">
+            <p className="text-sm leading-relaxed text-text-muted">
               Technology-driven wholesale distribution built for performance and
               scale.
             </p>
@@ -32,7 +32,7 @@ export default function SiteFooter() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-gray-400 transition-colors hover:text-white"
+                    className="text-sm text-text-muted transition-colors hover:text-text-primary"
                   >
                     {link.label}
                   </a>
@@ -51,7 +51,7 @@ export default function SiteFooter() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-gray-400 transition-colors hover:text-white"
+                    className="text-sm text-text-muted transition-colors hover:text-text-primary"
                   >
                     {link.label}
                   </a>
@@ -65,7 +65,7 @@ export default function SiteFooter() {
             <h4 className="mb-4 text-sm font-semibold tracking-widest uppercase">
               Contact
             </h4>
-            <ul className="space-y-2 text-sm text-gray-400">
+            <ul className="space-y-2 text-sm text-text-muted">
               <li>{siteConfig.email}</li>
               <li>{siteConfig.phone}</li>
               <li>{siteConfig.location}</li>
@@ -73,7 +73,7 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-gray-500">
+        <div className="mt-12 border-t border-divider pt-8 text-center text-sm text-text-tertiary">
           &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
           reserved.
         </div>

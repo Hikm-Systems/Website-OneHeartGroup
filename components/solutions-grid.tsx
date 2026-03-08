@@ -1,52 +1,85 @@
 import { serviceCards } from "@/lib/site-data";
 
 const icons: Record<string, React.ReactNode> = {
-  package: (
-    <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+  warehouse: (
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z" />
+      <path d="M6 18h12" />
+      <path d="M6 14h12" />
+      <rect width="12" height="12" x="6" y="10" />
     </svg>
   ),
-  link: (
-    <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m9.86-2.54a4.5 4.5 0 0 0-1.242-7.244l-4.5-4.5a4.5 4.5 0 0 0-6.364 6.364L4.25 8.016" />
+  chart: (
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+      <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+      <polyline points="16 7 22 7 22 13" />
     </svg>
   ),
   globe: (
-    <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5a17.92 17.92 0 0 1-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+      <path d="M2 12h20" />
     </svg>
   ),
   truck: (
-    <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.149-.504 1.174-1.125l.29-8.159A2.25 2.25 0 0 0 19.487 7.5H14.25m-6.586 8.218L3.363 3.663A1.125 1.125 0 0 0 2.25 3H1.5" />
+    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+      <path d="M15 18H9" />
+      <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+      <circle cx="17" cy="18" r="2" />
+      <circle cx="7" cy="18" r="2" />
     </svg>
   ),
 };
 
 export default function SolutionsGrid() {
   return (
-    <section id="solutions" className="bg-brand px-6 py-24">
+    <section id="services" className="bg-bg-default px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold sm:text-4xl">Complete Distribution Solutions</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-gray-400">
-            From warehouse to doorstep, we provide the infrastructure, technology,
-            and expertise to power your distribution operations.
+          <div className="mb-4 inline-flex items-center gap-2 text-brand-primary">
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+              <path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z" />
+              <path d="M6 18h12" />
+              <path d="M6 14h12" />
+              <rect width="12" height="12" x="6" y="10" />
+            </svg>
+            <span className="text-sm font-medium">Our Services</span>
+          </div>
+          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
+            Complete Distribution
+            <span className="gradient-text block">Solutions</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-text-muted">
+            Comprehensive services designed to streamline your supply chain and accelerate growth
           </p>
         </div>
+
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {serviceCards.map((card) => (
             <div
               key={card.title}
-              className="group rounded-2xl border border-white/10 bg-brand-light p-8 transition-all hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5"
+              className="group rounded-2xl border border-divider bg-bg-secondary p-7 transition-all hover:border-brand-primary/30"
             >
-              <div className="mb-5 inline-flex rounded-xl bg-accent/10 p-3 text-accent">
+              <div className="mb-5 inline-flex rounded-xl bg-brand-purple/20 p-3 text-brand-primary">
                 {icons[card.icon]}
               </div>
-              <h3 className="mb-3 text-lg font-semibold">{card.title}</h3>
-              <p className="text-sm leading-relaxed text-gray-400">
+              <h3 className="mb-2 text-lg font-semibold">{card.title}</h3>
+              <p className="mb-5 text-sm leading-relaxed text-text-muted">
                 {card.description}
               </p>
+              <ul className="space-y-2">
+                {card.features.map((feature) => (
+                  <li key={feature} className="flex items-center gap-2 text-sm text-text-secondary">
+                    <svg className="h-4 w-4 shrink-0 text-brand-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

@@ -10,11 +10,11 @@ const operationsImages = [
 
 export default function OperationsSection() {
   return (
-    <section id="operations" className="bg-brand px-6 py-24">
+    <section id="gallery" className="bg-bg-default px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">Our Operations</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-gray-400">
+          <p className="mx-auto mt-4 max-w-2xl text-text-muted">
             State-of-the-art facilities and streamlined processes ensure your
             products are stored, managed, and shipped with precision.
           </p>
