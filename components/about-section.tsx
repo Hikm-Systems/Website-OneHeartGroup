@@ -37,6 +37,8 @@ export default function AboutSection() {
               alt={aboutContent.partnerSection.image.alt}
               width={640}
               height={480}
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              loading="lazy"
               className="h-auto w-full object-cover"
             />
           </div>
@@ -51,6 +53,8 @@ export default function AboutSection() {
                 alt={aboutContent.performanceSection.image.alt}
                 width={640}
                 height={480}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="lazy"
                 className="h-auto w-full object-cover"
               />
             </div>

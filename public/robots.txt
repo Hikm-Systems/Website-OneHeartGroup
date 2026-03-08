@@ -1,0 +1,5 @@
+# OneHeart Group — Wholesale Distribution & Brand Growth
+User-agent: *
+Allow: /
+
+Sitemap: https://www.oneheartgroup.com/sitemap.xml

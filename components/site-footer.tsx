@@ -70,7 +70,7 @@ export default function SiteFooter() {
           </div>
 
           {/* Services */}
-          <div className="lg:col-span-3">
+          <nav aria-label="Services" className="lg:col-span-3">
             <h4 className="mb-4 text-sm font-semibold tracking-widest uppercase">
               Services
             </h4>
@@ -86,10 +86,10 @@ export default function SiteFooter() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Company */}
-          <div className="lg:col-span-2">
+          <nav aria-label="Company" className="lg:col-span-2">
             <h4 className="mb-4 text-sm font-semibold tracking-widest uppercase">
               Company
             </h4>
@@ -105,7 +105,7 @@ export default function SiteFooter() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Contact */}
           <div className="lg:col-span-3">

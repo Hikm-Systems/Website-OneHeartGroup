@@ -8,8 +8,9 @@ export default function ScaleCtaBottom() {
       <div className="absolute inset-0">
         <Image
           src={ctaBottom.backgroundImage}
-          alt="Distribution operations"
+          alt="OneHeart Group wholesale distribution operations center"
           fill
+          sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-[#060606]/70" />
