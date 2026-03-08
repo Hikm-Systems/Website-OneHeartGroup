@@ -9,7 +9,7 @@ export default function TechnologySection() {
           {/* Content */}
           <div>
             <h2 className="text-3xl font-bold sm:text-4xl">
-              Powered by Technology
+              Powered by <span className="gradient-text">Technology</span>
             </h2>
             <p className="mt-2 text-sm font-semibold tracking-widest text-brand-primary uppercase">
               Modern Infrastructure, Maximum Efficiency

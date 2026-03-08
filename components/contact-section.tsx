@@ -17,7 +17,8 @@ export default function ContactSection() {
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">
-            Let&apos;s Start the Conversation
+            Let&apos;s Start the{" "}
+            <span className="gradient-text">Conversation</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-text-muted">
             Ready to scale your distribution? Get in touch and let&apos;s build

@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "OneHeart Group",
   tagline: "Wholesale Distribution Built for Scale",
   email: "info@oneheartgroup.com",
-  phone: "+1 (800) 555-0199",
+  phone: "+1 (234) 200-8087",
   location: "United States",
   logo: "/images/Website_Logo-removebg-preview.png",
 };
@@ -101,7 +101,7 @@ export const footerLinks = {
   ],
   company: [
     { label: "About Us", href: "#about" },
-    { label: "Gallery", href: "#gallery" },
-    { label: "Contact", href: "#contact" },
+    { label: "Why Choose Us", href: "#why-choose-us" },
+    { label: "Contact Us", href: "#contact" },
   ],
 };
