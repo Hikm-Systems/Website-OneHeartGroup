@@ -6,7 +6,7 @@ export default function WhyChooseUs() {
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">
-            Why Choose OneHeart Group?
+            Why Choose <span className="gradient-text">OneHeart Group?</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-text-muted">
             We go beyond distribution — delivering partnership, expertise, and
