@@ -22,8 +22,8 @@ export default function SiteHeader() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-        {/* Logo — 80px height matching original */}
+      <div className="mx-auto flex max-w-[90rem] items-center justify-between px-6 py-3">
+        {/* Logo — left edge */}
         <a href="#home" className="relative h-[80px] w-[200px] shrink-0">
           <Image
             src={siteConfig.logo}
@@ -34,24 +34,28 @@ export default function SiteHeader() {
           />
         </a>
 
-        {/* Desktop nav */}
-        <nav className="hidden items-center gap-1 lg:flex">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="rounded-lg px-4 py-2 text-sm font-medium text-text-primary transition-colors hover:bg-bg-card"
-            >
-              {item.label}
-            </a>
-          ))}
-          <a
-            href="#contact"
-            className="ml-4 rounded-lg bg-brand-primary px-6 py-2.5 text-sm font-medium text-white transition-colors hover:brightness-110"
-          >
-            Contact Us
-          </a>
+        {/* Desktop nav — centered menu links */}
+        <nav className="hidden lg:flex items-center absolute left-1/2 -translate-x-1/2">
+          <div className="flex items-center gap-1 rounded-full bg-white/5 backdrop-blur-sm px-2 py-1">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="rounded-full px-5 py-2 text-[1rem] font-medium text-text-primary transition-colors duration-250 hover:bg-bg-hover-black"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
         </nav>
+
+        {/* Contact Us — right edge */}
+        <a
+          href="#contact"
+          className="hidden lg:inline-flex shrink-0 rounded-full bg-brand-primary px-6 py-2.5 text-[1rem] font-medium text-white transition-colors duration-250 hover:bg-[#dde2eb] hover:text-[#060606]"
+        >
+          Contact Us
+        </a>
 
         {/* Mobile hamburger */}
         <button
@@ -93,7 +97,7 @@ export default function SiteHeader() {
           <a
             href="#contact"
             onClick={() => setMobileOpen(false)}
-            className="mt-2 block rounded-lg bg-brand-primary px-5 py-2.5 text-center text-sm font-medium text-white transition-colors hover:brightness-110"
+            className="mt-2 block rounded-full bg-brand-primary px-5 py-2.5 text-center text-sm font-medium text-white transition-colors hover:brightness-110"
           >
             Contact Us
           </a>
