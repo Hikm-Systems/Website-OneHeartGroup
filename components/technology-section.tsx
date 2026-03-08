@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { technologyHighlights } from "@/lib/site-data";
+import { technologyHighlights, technologyContent } from "@/lib/site-data";
 
 export default function TechnologySection() {
   return (
@@ -9,15 +9,14 @@ export default function TechnologySection() {
           {/* Content */}
           <div>
             <h2 className="text-3xl font-bold sm:text-4xl">
-              Powered by <span className="gradient-text">Technology</span>
+              {technologyContent.heading}{" "}
+              <span className="gradient-text">{technologyContent.headingAccent}</span>
             </h2>
             <p className="mt-2 text-sm font-semibold tracking-widest text-brand-primary uppercase">
-              Modern Infrastructure, Maximum Efficiency
+              {technologyContent.subtitle}
             </p>
             <p className="mt-6 leading-relaxed text-text-muted">
-              Our operations are built on cutting-edge technology that delivers
-              speed, precision, and transparency at every touchpoint in the
-              supply chain.
+              {technologyContent.description}
             </p>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -36,8 +35,8 @@ export default function TechnologySection() {
           {/* Image */}
           <div className="relative overflow-hidden rounded-2xl">
             <Image
-              src="/images/AI-Circular-Manufacturing-image.webp"
-              alt="AI-powered technology infrastructure"
+              src={technologyContent.image.src}
+              alt={technologyContent.image.alt}
               width={640}
               height={480}
               className="h-auto w-full object-cover"
