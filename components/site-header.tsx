@@ -18,12 +18,13 @@ export default function SiteHeader() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-brand/95 backdrop-blur-md shadow-lg"
+          ? "bg-bg-default/95 backdrop-blur-md shadow-lg"
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <a href="#" className="relative h-10 w-44 shrink-0">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+        {/* Logo — 80px height matching original */}
+        <a href="#home" className="relative h-[80px] w-[200px] shrink-0">
           <Image
             src={siteConfig.logo}
             alt={siteConfig.name}
@@ -34,28 +35,28 @@ export default function SiteHeader() {
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-gray-300 transition-colors hover:text-white"
+              className="rounded-lg px-4 py-2 text-sm font-medium text-text-primary transition-colors hover:bg-bg-card"
             >
               {item.label}
             </a>
           ))}
           <a
             href="#contact"
-            className="rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
+            className="ml-4 rounded-lg bg-brand-primary px-6 py-2.5 text-sm font-medium text-white transition-colors hover:brightness-110"
           >
-            Get Started
+            Contact Us
           </a>
         </nav>
 
         {/* Mobile hamburger */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="flex flex-col gap-1.5 md:hidden"
+          className="flex flex-col gap-1.5 lg:hidden"
           aria-label="Toggle menu"
         >
           <span
@@ -78,13 +79,13 @@ export default function SiteHeader() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <nav className="border-t border-white/10 bg-brand/95 px-6 py-4 backdrop-blur-md md:hidden">
+        <nav className="border-t border-divider bg-bg-default/95 px-6 py-4 backdrop-blur-md lg:hidden">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
               onClick={() => setMobileOpen(false)}
-              className="block py-3 text-sm font-medium text-gray-300 transition-colors hover:text-white"
+              className="block py-3 text-sm font-medium text-text-primary transition-colors hover:text-brand-primary"
             >
               {item.label}
             </a>
@@ -92,9 +93,9 @@ export default function SiteHeader() {
           <a
             href="#contact"
             onClick={() => setMobileOpen(false)}
-            className="mt-2 block rounded-lg bg-accent px-5 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
+            className="mt-2 block rounded-lg bg-brand-primary px-5 py-2.5 text-center text-sm font-medium text-white transition-colors hover:brightness-110"
           >
-            Get Started
+            Contact Us
           </a>
         </nav>
       )}

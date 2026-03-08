@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "OneHeart Group | Wholesale Distribution Built for Scale",
+  title: "OneHeart Group - wholesale distribution solutions",
   description:
-    "OneHeart Group delivers end-to-end wholesale distribution, supply chain management, and logistics solutions built for performance and scale.",
+    "OneHeart Group delivers comprehensive wholesale distribution solutions with advanced logistics, real-time inventory management, and seamless supply chain integration.",
 };
 
 export default function RootLayout({
@@ -14,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-brand text-white antialiased">{children}</body>
+      <body className="bg-bg-default text-text-primary antialiased">
+        {children}
+      </body>
     </html>
   );
 }
