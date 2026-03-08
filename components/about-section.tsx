@@ -49,9 +49,6 @@ export default function AboutSection() {
       <div className="mx-auto max-w-7xl">
         {/* Section header */}
         <div className="mb-16 text-center">
-          <p className="mb-3 text-sm font-semibold tracking-widest text-brand-primary uppercase font-mono">
-            About Us
-          </p>
           <h2 className="text-3xl font-bold sm:text-4xl md:text-[3.125rem] md:leading-[3.5rem] tracking-tight">
             About <span className="gradient-text">OneHeart Group</span>
           </h2>

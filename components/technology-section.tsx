@@ -12,7 +12,7 @@ export default function TechnologySection() {
               Powered by <span className="gradient-text">Technology</span>
             </h2>
             <p className="mt-2 text-sm font-semibold tracking-widest text-brand-primary uppercase">
-              Modern Infrastructure, Maximum Efficiency
+              Cutting-edge systems driving efficiency and accuracy
             </p>
             <p className="mt-6 leading-relaxed text-text-muted">
               Our operations are built on cutting-edge technology that delivers

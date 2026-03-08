@@ -42,39 +42,13 @@ export const serviceCards = [
     title: "E-Commerce Integration",
     description: "Seamless integration with major e-commerce platforms and marketplaces.",
     icon: "globe",
-    features: ["Multi-channel sync", "Automated order routing", "Returns management", "Analytics dashboard"],
+    features: ["Multi-channel sync", "Automated order routing", "Returns management", "Platform integration"],
   },
   {
     title: "Logistics Solutions",
-    description: "Comprehensive logistics and transportation management for reliable delivery.",
+    description: "Advanced logistics and transportation management for optimal delivery performance.",
     icon: "truck",
-    features: ["Route optimization", "Last-mile delivery", "Freight management", "Real-time visibility"],
-  },
-];
-
-export const aboutHighlights = [
-  { label: "Customer-Centric", description: "Every decision starts with what's best for our partners." },
-  { label: "Reliability", description: "Consistent, dependable service you can count on." },
-  { label: "Innovation", description: "Leveraging technology to stay ahead of the curve." },
-  { label: "Scale", description: "Infrastructure built to grow with your business." },
-];
-
-export const whyChooseUsItems = [
-  {
-    title: "Partnership Approach",
-    description: "We don't just serve clients — we build lasting partnerships rooted in mutual growth and shared success.",
-  },
-  {
-    title: "Industry Expertise",
-    description: "Decades of combined experience in wholesale distribution, supply chain, and logistics operations.",
-  },
-  {
-    title: "Technology-Driven",
-    description: "Modern systems and automation that deliver speed, accuracy, and real-time visibility across operations.",
-  },
-  {
-    title: "Scalable Solutions",
-    description: "From startups to enterprise — our infrastructure flexes to meet demand at any volume.",
+    features: ["Last-mile delivery", "Freight optimization", "Route planning", "Fleet management"],
   },
 ];
 
@@ -85,19 +59,12 @@ export const technologyHighlights = [
   { title: "Automated Processing", description: "AI-powered automation reducing errors and accelerating order throughput." },
 ];
 
-export const commitmentItems = [
-  { title: "Proven Excellence", value: "99.8%", description: "Order accuracy rate across all distribution channels." },
-  { title: "Nationwide Reach", value: "50+", description: "States served with reliable logistics coverage." },
-  { title: "Growth Partnership", value: "200%", description: "Average partner revenue growth within the first year." },
-  { title: "Dedicated Support", value: "24/7", description: "Round-the-clock support for all active partners." },
-];
-
 export const footerLinks = {
   services: [
     { label: "Wholesale Distribution", href: "#services" },
-    { label: "Supply Chain", href: "#services" },
-    { label: "E-Commerce", href: "#services" },
-    { label: "Logistics", href: "#services" },
+    { label: "Supply Chain Management", href: "#services" },
+    { label: "E-Commerce Integration", href: "#services" },
+    { label: "Logistics Solutions", href: "#services" },
   ],
   company: [
     { label: "About Us", href: "#about" },

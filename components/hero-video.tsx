@@ -8,7 +8,7 @@ export default function HeroVideo() {
         loop
         playsInline
         poster="/images/1-1.webp"
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full rounded-[2rem] object-cover"
       >
         <source src="/videos/852388-hd_1920_1080_24fps-1-transcode.mp4" type="video/mp4" />
         <source src="/videos/852388-hd_1920_1080_24fps-1-transcode.webm" type="video/webm" />
@@ -49,7 +49,7 @@ export default function HeroVideo() {
           </a>
           <a
             href="#services"
-            className="inline-flex items-center gap-2 rounded-[10px] bg-brand-purple px-6 py-2.5 text-sm font-medium text-[#fafafa] shadow-lg transition-all hover:brightness-125"
+            className="inline-flex items-center gap-2 rounded-[10px] border border-white/30 bg-transparent px-6 py-2.5 text-sm font-medium text-[#fafafa] transition-all hover:bg-white/10"
           >
             View Our Solutions
           </a>

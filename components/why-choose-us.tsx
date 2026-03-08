@@ -62,8 +62,8 @@ export default function WhyChooseUs() {
             Why Choose <span className="gradient-text">OneHeart Group?</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-text-muted">
-            We go beyond distribution — delivering partnership, expertise, and
-            technology that drives real results for your business.
+            The distribution partner that combines reliability, innovation, and
+            personalized service.
           </p>
         </div>
 

@@ -53,8 +53,8 @@ export default function CommitmentSection() {
             Our <span className="gradient-text">Commitment</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-text-muted">
-            Our dedication to excellence in every aspect of wholesale
-            distribution.
+            Building lasting partnerships through excellence, reliability, and
+            innovation.
           </p>
         </div>
 
