@@ -18,18 +18,22 @@ export default function SiteHeader() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/10 backdrop-blur-md shadow-lg"
+          ? "bg-blue-900/20 backdrop-blur-md"
           : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-[90rem] items-center justify-between px-6 py-3">
         {/* Logo — left edge */}
         <a href="#home" className="relative h-[80px] w-[200px] shrink-0">
+          <span
+            className="absolute inset-y-1 -left-3 -right-1 -skew-x-6 rounded-md bg-white/90"
+            aria-hidden="true"
+          />
           <Image
             src={siteConfig.logo}
             alt={siteConfig.name}
             fill
-            className="object-contain object-left"
+            className="relative object-contain object-left"
             priority
           />
         </a>
