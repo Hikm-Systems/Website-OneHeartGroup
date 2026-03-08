@@ -14,11 +14,13 @@ export default function HeroVideo() {
     if (!inner) return;
 
     function onScroll() {
-      if (!inner) return;
-      const scrollY = window.scrollY;
+      if (!section || !inner) return;
+      const rect = section.getBoundingClientRect();
       const windowH = window.innerHeight;
-      // progress 0 → 1 over the first viewport height of scroll
-      const progress = Math.min(scrollY / windowH, 1);
+      // How far the section top has scrolled above the viewport
+      const scrolled = -rect.top;
+      // progress 0 → 1 over the extra scroll height (second 100vh)
+      const progress = Math.max(0, Math.min(scrolled / windowH, 1));
 
       // Scale from 1 down to 0.92
       const scale = 1 - progress * 0.08;
@@ -36,10 +38,10 @@ export default function HeroVideo() {
   }, []);
 
   return (
-    <section id="home" ref={sectionRef} className="sticky top-0 h-screen overflow-hidden">
+    <section id="home" ref={sectionRef} className="relative h-[200vh]">
       <div
         data-hero-inner=""
-        className="absolute inset-0 h-full w-full overflow-hidden will-change-transform"
+        className="sticky top-0 h-screen w-full overflow-hidden will-change-transform"
         style={{ transformOrigin: "center center" }}
       >
         {/* Background video */}
