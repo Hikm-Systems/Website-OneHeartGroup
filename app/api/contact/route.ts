@@ -19,7 +19,7 @@ export async function POST(request: Request) {
 
     const { error } = await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL ?? "OneHeart Group <onboarding@resend.dev>",
-      to: process.env.CONTACT_TO_EMAIL ?? "info@oneheartgroup.com",
+      to: process.env.CONTACT_TO_EMAIL ?? "admin@oneheartgroup.com",
       replyTo: email,
       subject: `New Contact Form: ${fullName}${company ? ` (${company})` : ""}`,
       html: `
