@@ -42,9 +42,6 @@ export default function ContactSection() {
     <section id="contact" className="bg-bg-default px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
-          <p className="mb-3 text-sm font-semibold tracking-widest text-brand-primary uppercase font-mono">
-            Contact Us
-          </p>
           <h2 className="text-3xl font-bold sm:text-4xl md:text-[3.125rem] md:leading-[3.5rem] tracking-tight">
             Let&apos;s Start the{" "}
             <span className="gradient-text">Conversation</span>
@@ -60,6 +57,7 @@ export default function ContactSection() {
             onSubmit={handleSubmit}
             className="space-y-5 lg:col-span-3 rounded-2xl border border-divider bg-bg-secondary p-8"
           >
+            <h3 className="text-xl font-bold text-text-primary">Contact Us</h3>
             <div className="grid gap-5 sm:grid-cols-2">
               <input
                 name="firstName"
