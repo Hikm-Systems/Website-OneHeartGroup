@@ -26,7 +26,7 @@ export default function SiteHeader() {
         {/* Logo — left edge */}
         <a href="#home" className="relative h-[80px] w-[200px] shrink-0">
           <span
-            className="absolute inset-y-1 -left-3 -right-1 -skew-x-6 rounded-md bg-white/90"
+            className="absolute inset-y-1 -left-3 right-3 -skew-x-6 rounded-md bg-white/90"
             aria-hidden="true"
           />
           <Image
