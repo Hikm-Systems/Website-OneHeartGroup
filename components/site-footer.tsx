@@ -41,16 +41,16 @@ export default function SiteFooter() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-12">
           {/* Brand — wider column */}
           <div className="lg:col-span-4">
-            <div className="relative mb-5 h-16 w-48">
+            <div className="relative mb-5 h-16 w-16">
               <span
-                className="absolute inset-y-0 -left-3 right-3 -skew-x-6 rounded-md bg-white/90"
+                className="absolute inset-y-0 -left-3 -right-3 -skew-x-6 rounded-md bg-white/90"
                 aria-hidden="true"
               />
               <Image
                 src={siteConfig.logo}
                 alt={siteConfig.name}
                 fill
-                className="relative object-contain object-left"
+                className="relative object-contain"
               />
             </div>
             <p className="max-w-xs text-sm leading-relaxed text-text-muted">
