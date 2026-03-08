@@ -57,7 +57,7 @@ export default function ContactSection() {
             onSubmit={handleSubmit}
             className="space-y-5 lg:col-span-3 rounded-2xl border border-divider bg-bg-secondary p-8"
           >
-            <h3 className="text-xl font-bold text-text-primary">Contact Us</h3>
+            <h3 className="text-2xl font-bold text-center gradient-text">Contact Us</h3>
             <div className="grid gap-5 sm:grid-cols-2">
               <input
                 name="firstName"
