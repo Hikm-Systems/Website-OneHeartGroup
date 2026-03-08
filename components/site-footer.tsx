@@ -43,7 +43,7 @@ export default function SiteFooter() {
           <div className="lg:col-span-4">
             <div className="relative mb-5 h-16 w-48">
               <span
-                className="absolute inset-y-0 -left-3 -right-1 -skew-x-6 rounded-md bg-white/90"
+                className="absolute inset-y-0 -left-3 right-3 -skew-x-6 rounded-md bg-white/90"
                 aria-hidden="true"
               />
               <Image
